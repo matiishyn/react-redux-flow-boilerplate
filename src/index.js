@@ -1,15 +1,6 @@
-const obj = {
-  foo: {
-    bar: {
-      baz: 42
-    }
-  }
-};
+import ReactDOM from "react-dom";
+import React from "react";
 
-const baz = obj?.foo?.bar?.baz; // 42
+console.log("react works");
 
-const safe = obj?.qux?.baz; // undefined
-
-const a = 1 + 1;
-
-console.log(baz, safe);
+ReactDOM.render(<h1>hello, world</h1>, document.getElementById("app"));
