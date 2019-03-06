@@ -42,7 +42,7 @@ module.exports = {
     },
     development: {
       plugins: [
-        // 'react-hot-loader/babel',
+        'react-hot-loader/babel',
         ...esNext
       ],
     },
