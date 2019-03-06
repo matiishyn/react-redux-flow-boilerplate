@@ -152,7 +152,7 @@ module.exports = options => ({
   devServer: {
     // https://webpack.js.org/configuration/dev-server/#devservercontentbase
     contentBase: sourcePath, // assets
-    // hot: true,
+    hot: true,
     inline: true,
     open: true,
     overlay: true,
