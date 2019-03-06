@@ -1,5 +1,13 @@
-import {test} from 'app/routes.js';
+const obj = {
+  foo: {
+    bar: {
+      baz: 42,
+    },
+  },
+};
 
-console.log(test);
+const baz = obj?.foo?.bar?.baz; // 42
 
-console.log('aaa');
+const safe = obj?.qux?.baz; // undefined
+
+console.log(baz, safe);
