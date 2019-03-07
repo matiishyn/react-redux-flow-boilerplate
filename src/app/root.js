@@ -6,10 +6,10 @@ import configureAppStore from './store';
 
 const store = configureAppStore();
 
-const App = () => (
+const Root = () => (
   <Provider store={store}>
     <Router />
   </Provider>
 );
 
-export default hot(App);
+export default hot(Root);
