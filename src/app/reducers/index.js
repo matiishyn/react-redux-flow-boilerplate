@@ -1,16 +1,6 @@
 import { combineReducers } from 'redux';
-
-// example
-const red1 = (state = { friends: [] }, action) => {
-  switch (action.type) {
-    case 'ADD_FRIEND':
-      return [{ friends: action.payload.friend }, ...state.friends];
-    default:
-      return state;
-  }
-  return state;
-};
+import app from 'app/modules/app/reducer';
 
 export const rootReducer = combineReducers({
-  red1,
+  app,
 });

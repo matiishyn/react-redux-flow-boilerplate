@@ -1,9 +1,9 @@
+import { AppLoadable } from 'app/modules/app';
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { App } from 'app/modules/app/components/app';
+import { BrowserRouter } from 'react-router-dom';
 
 export const Router = () => (
   <BrowserRouter>
-    <App />
+    <AppLoadable />
   </BrowserRouter>
 );
