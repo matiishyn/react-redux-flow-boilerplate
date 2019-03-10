@@ -1,9 +1,9 @@
 import { createSelector } from 'reselect';
 
-export const selectPhoto = state => state.photo;
+export const selectPhotos = state => state.photos;
 
 export const selectPhotosData = () =>
   createSelector(
-    selectPhoto,
+    selectPhotos,
     state => state.photosData,
   );

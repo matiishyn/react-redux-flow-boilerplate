@@ -1,6 +1,6 @@
-import { Photos } from 'app/modules/photo/components/photos';
-import { selectPhotosData } from 'app/modules/photo/selectors';
-import { getPhotos } from 'app/modules/photo/thunks';
+import { Photos } from 'app/modules/photos/components/photos';
+import { selectPhotosData } from 'app/modules/photos/selectors';
+import { getPhotos } from 'app/modules/photos/thunks';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'redux';

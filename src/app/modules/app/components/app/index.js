@@ -1,4 +1,4 @@
-import { PhotosLoadable } from 'app/modules/photo';
+import { PhotosLoadable } from 'app/modules/photos';
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Nav } from '../nav';
