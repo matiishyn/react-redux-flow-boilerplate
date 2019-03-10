@@ -89,16 +89,20 @@ module.exports = {
       // webpack.config but with this webstorm works better.
       // eslint-import-resolver-alias
       'alias': [
-        ['app', path.join(__dirname, './src/app')],
-        ['src', path.join(__dirname, './src')],
-        // ['global-config', path.join(__dirname, './config')]
+        ['app', path.join(__dirname, 'src/app/')],
+        ['assets', path.join(__dirname, 'src/assets/')],
+        // ['TT', 'src/app/test/'],
       ],
       // It also works but with alias there are no red highlight in webstorm
       // and with this approach build works but I still see red highlights in webstorm
       // eslint-import-resolver-webpack
-      'webpack': {
-        'config': path.join(__dirname, './webpack/webpack.base.js')
-      }
+      // 'webpack': {
+      //   'config': [
+      //     path.join(__dirname, './webpack/webpack.base.js'),
+      //     path.join(__dirname, './webpack/webpack.dev.js'),
+      //     // path.join(__dirname, './webpack.config.js'),
+      //   ]
+      // }
     }
   }
 };
