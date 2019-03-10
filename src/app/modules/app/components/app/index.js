@@ -1,8 +1,9 @@
+import { PhotosLoadable } from 'app/modules/photo';
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Nav } from '../nav';
 
-const Home = () => <h1>Home23</h1>;
+const Home = () => <h1>Home</h1>;
 const About = () => <h1>About</h1>;
 
 export class App extends Component {
@@ -20,6 +21,7 @@ export class App extends Component {
         <div className="container">
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route path="/photos" component={PhotosLoadable} />
             <Route path="/about" component={About} />
           </Switch>
         </div>

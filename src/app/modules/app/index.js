@@ -1,4 +1,3 @@
-// not used
 import React, { Suspense } from 'react';
 
 const AppContainer = React.lazy(() => import('./containers/app'));

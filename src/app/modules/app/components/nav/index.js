@@ -7,13 +7,16 @@ export const Nav = props => {
   return (
     <nav className="navbar navbar-light bg-light">
       <div className="container">
-        <a className="navbar-brand" href="#">
+        <NavLink className="navbar-brand" to="/">
           Navbar
-        </a>
+        </NavLink>
 
         <nav className="nav">
           <NavLink className="nav-link" exact activeClassName="active" to="/">
             Home
+          </NavLink>
+          <NavLink className="nav-link" activeClassName="active" to="/photos">
+            Photos
           </NavLink>
           <NavLink className="nav-link" activeClassName="active" to="/about">
             About
