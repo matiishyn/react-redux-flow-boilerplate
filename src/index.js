@@ -1,5 +1,9 @@
-import {test} from 'app/routes.js';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Root from 'app/root';
 
-console.log(test);
+// global styles
+import 'assets/styles/index.scss';
 
-console.log('aaa');
+const el = document.getElementById('app');
+ReactDOM.render(<Root />, el);
