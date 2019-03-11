@@ -4,9 +4,9 @@
 
 const path = require('path');
 const webpack = require('webpack');
+
 const sourcePath = path.join(__dirname, '../src');
 const outPath = path.join(__dirname, '../dist');
-
 
 module.exports = options => ({
   context: sourcePath,
@@ -24,12 +24,12 @@ module.exports = options => ({
   optimization: options.optimization,
   module: {
     rules: [
-      // {
-      //   enforce: 'pre',
-      //   test: /\.(js|jsx)$/,
-      //   exclude: /node_modules/,
-      //   loader: 'eslint-loader',
-      // },
+      {
+        enforce: 'pre',
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+      },
       {
         test: /\.js$/, // Transform all .js files required somewhere with Babel
         exclude: /node_modules/,
@@ -161,5 +161,5 @@ module.exports = options => ({
     },
     stats: 'minimal',
     // proxy: { },
-  }
+  },
 });

@@ -1,7 +1,7 @@
 import { getProfileApi } from './api';
 import { ACTION } from './reducer';
 
-export const getProfile = () => (dispatch, getState) => {
+export const getProfile = () => dispatch => {
   dispatch(ACTION.getProfile());
   return getProfileApi()
     .then(result => dispatch(ACTION.getProfileSuccess(result.data)))
