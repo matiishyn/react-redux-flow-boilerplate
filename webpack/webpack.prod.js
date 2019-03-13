@@ -1,9 +1,11 @@
+// TODO USE WP MERGE
+
 // Important modules this config uses
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { HashedModuleIdsPlugin } = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = require('./webpack.base')({
   mode: 'production',
@@ -63,6 +65,8 @@ module.exports = require('./webpack.base')({
   },
 
   plugins: [
+    // clean /dist before build
+    new CleanWebpackPlugin(),
     // Minify and optimize the index.html
     new HtmlWebpackPlugin({
       template: 'index.html',

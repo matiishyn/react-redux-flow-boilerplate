@@ -4,9 +4,11 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const sourcePath = path.join(__dirname, '../src');
 const outPath = path.join(__dirname, '../dist');
+const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = options => ({
   context: sourcePath,
@@ -38,8 +40,7 @@ module.exports = options => ({
       {
         test: /\.scss$/,
         use: [
-          // isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
-          'style-loader',
+          isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
           {
             loader: 'css-loader',
             options: {
@@ -133,6 +134,14 @@ module.exports = options => ({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       },
+    }),
+
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: isProduction ? '[name].[hash].css' : '[name].css',
+      chunkFilename: isProduction ? '[id].[hash].css' : '[id].css',
+      disable: !isProduction,
     }),
   ]),
   resolve: {
