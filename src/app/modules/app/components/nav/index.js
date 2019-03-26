@@ -21,6 +21,9 @@ export const Nav = props => {
           <NavLink className="nav-link" activeClassName="active" to="/about">
             About
           </NavLink>
+          <NavLink className="nav-link" activeClassName="active" to="/users">
+            Users
+          </NavLink>
         </nav>
 
         <span className="navbar-text">Hello, {profileData.name}</span>
