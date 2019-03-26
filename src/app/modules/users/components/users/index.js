@@ -1,3 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export const Users = () => <>Users list</>;
+export class Users extends Component {
+  componentDidMount = () => {
+    const { getUsers } = this.props;
+    getUsers();
+  };
+
+  render() {
+    return <>Users</>;
+  }
+}
