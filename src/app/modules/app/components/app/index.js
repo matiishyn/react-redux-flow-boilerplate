@@ -1,4 +1,5 @@
 import { PhotosLoadable } from 'app/modules/photos';
+import { Users } from 'app/modules/users';
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Nav } from '../nav';
@@ -23,6 +24,7 @@ export class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/photos" component={PhotosLoadable} />
             <Route path="/about" component={About} />
+            <Route path="/users" component={Users} />
           </Switch>
         </div>
       </>
