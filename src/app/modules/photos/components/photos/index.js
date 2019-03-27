@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './styles.scss';
 
 export class Photos extends Component {
   componentDidMount = () => {
@@ -9,7 +10,7 @@ export class Photos extends Component {
   render() {
     const { photosData } = this.props;
     return (
-      <div>
+      <div className="photos-component">
         {photosData.map(photo => (
           <img
             width={150}
