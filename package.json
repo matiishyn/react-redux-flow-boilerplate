@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server --progress --color --config webpack/webpack.dev.js",
+    "start:prod": "npm run build && npx servor dist index.html 8080",
     "build": "NODE_ENV=production webpack --progress --colors --config webpack/webpack.prod.js",
     "lint": "eslint ./src --max-warnings=0"
   },
